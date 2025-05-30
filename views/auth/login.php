@@ -1,6 +1,4 @@
-<?php
-if (session_status() === PHP_SESSION_NONE) session_start();
-?>
+<?php if (session_status() === PHP_SESSION_NONE) session_start(); ?>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
@@ -72,6 +70,11 @@ if (session_status() === PHP_SESSION_NONE) session_start();
             <i class="bi bi-person-circle" style="font-size:1.7rem;vertical-align:middle;margin-right:.6rem;"></i>
             Giriş Yap
         </div>
+        <!-- HATA MESAJI -->
+        <?php if (isset($error) && !empty($error)): ?>
+            <div class="alert alert-danger text-center py-2 mb-3"><?= htmlspecialchars($error) ?></div>
+        <?php endif; ?>
+
         <form method="POST" action="index.php?page=handleLogin">
             <div class="mb-3">
                 <label for="tc" class="form-label">TC Kimlik No</label>
@@ -88,7 +91,10 @@ if (session_status() === PHP_SESSION_NONE) session_start();
                 <label for="password" class="form-label">Şifre</label>
                 <input type="password" class="form-control" id="password" name="password" required>
             </div>
-            <button type="submit" class=" btn-login">Giriş Yap</button>
+            <button type="submit" class="btn btn-login">Giriş Yap</button>
+
+            <a href="index.php?page=forgotPassword" class="text-link d-block text-center mt-2" style="color: #b02a37; text-decoration: underline;">Şifremi Unuttum</a>
+            
             <a href="index.php?page=register" class="text-link d-block text-center mt-3">Hesabın yok mu? Kayıt ol</a>
         </form>
     </div>

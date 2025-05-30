@@ -40,6 +40,18 @@ class User {
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
+    public function updatePasswordByTC($tc_no, $password)
+    {
+        $sql = "UPDATE users SET password = :password WHERE tc_no = :tc_no";
+        $stmt = $this->conn->prepare($sql);
+        $hashed = password_hash($password, PASSWORD_DEFAULT);
+        return $stmt->execute([
+            'password' => $hashed,
+            'tc_no'    => $tc_no
+        ]);
+    }
+
+
     public function tcExists($tc_no) {
         $sql = "SELECT COUNT(*) FROM users WHERE tc_no = :tc_no";
         $stmt = $this->conn->prepare($sql);

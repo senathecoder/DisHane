@@ -37,6 +37,17 @@ function route($page) {
             $controller->handleForgotPassword();
             break;
 
+        case 'resetPassword':
+            $content = BASE_PATH . '/views/auth/reset-password.php';
+            require BASE_PATH . '/views/layout.php';
+            break;
+
+        case 'handleResetPassword':
+            require_once BASE_PATH . '/controllers/AuthController.php';
+            $controller = new AuthController();
+            $controller->handleResetPassword();
+            break;
+
         case 'handleAddAppointment':
             require_once BASE_PATH . '/controllers/AppointmentController.php';
             $controller = new AppointmentController();
