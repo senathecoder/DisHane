@@ -34,7 +34,7 @@ DişHane, küçük ve orta ölçekli diş klinikleri için geliştirilmiş bir w
 - Araçlar: Visual Studio Code, XAMPP
 
 ## Kurulum
-1.Bu projeyi htdocs klasörüne taşıyın (XAMPP/MAMP için).
+1. Bu projeyi htdocs klasörüne taşıyın (XAMPP/MAMP için).
 
 2. Veritabanı dosyasını phpMyAdmin üzerinden içe aktarın.
    
