@@ -29,7 +29,7 @@ DişHane, küçük ve orta ölçekli diş klinikleri için geliştirilmiş bir w
 
 ## Kullanılan Teknolojiler
 - Backend: PHP (MVC yapısı)
-- Frontend: HTML, CSS, JavaScript
+- Frontend: HTML, CSS, JavaScript, Ajax
 - Veritabanı: MySQL (phpMyAdmin ile yönetim)
 - Araçlar: Visual Studio Code, XAMPP
 
