@@ -35,8 +35,11 @@ DişHane, küçük ve orta ölçekli diş klinikleri için geliştirilmiş bir w
 
 ## Kurulum
 1.Bu projeyi htdocs klasörüne taşıyın (XAMPP/MAMP için).
+
 2. Veritabanı dosyasını phpMyAdmin üzerinden içe aktarın.
+   
 3. config/config.php dosyasındaki veritabanı ayarlarını yapın.
+   
 4. Tarayıcınızda şu adrese gidin: http://localhost/DisHane/public
 
 ## Geliştirici
